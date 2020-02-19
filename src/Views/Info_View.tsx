@@ -1,7 +1,7 @@
-import React from 'react'
-import { StyleSheet, Text, View, Image } from 'react-native';
-import logoSopra from '../Assets/soprasteria_logo.png'
-import logoCS from '../Assets/LogoCS.png'
+import React, { Component } from "react";
+import { StyleSheet, View } from "react-native";
+import MaterialCardWithoutImage1 from "../components/MaterialCardWithoutImage1";
+import MaterialIconTextButtonsFooter from "../components/MaterialIconTextButtonsFooter";
 
 export default class InfoView extends React.Component {
   constructor(props) {
@@ -10,37 +10,49 @@ export default class InfoView extends React.Component {
 
   render() {
     return (
-      <View style={[styles.container]}>
-        <Text style={[styles.text]}>Cette application a été crée par deux étudiants de CentraleSupélec,
-        dans le cadre de leur projet d'option en partenariat avec Sopra Steria</Text>
-        <Image
-          resizeMode="contain"
-          style={styles.image}
-          source={logoSopra} />
-        <Image
-          resizeMode="contain"
-          style={styles.image}
-          source={logoCS} />
+      <View style={styles.container}>
+        <View style={styles.rectStack}>
+          <View style={styles.rect}>
+            <MaterialCardWithoutImage1
+              style={styles.materialCardWithoutImage1}
+            ></MaterialCardWithoutImage1>
+          </View>
+          <MaterialIconTextButtonsFooter
+            style={styles.materialIconTextButtonsFooter}
+          ></MaterialIconTextButtonsFooter>
+        </View>
       </View>
     )
   }
 }
 
-
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: 'center'
+    flex: 1
   },
-  text: {
-    color: 'black',
-    fontSize: 20,
-    marginTop: 70,
-    marginHorizontal: 10,
+  rect: {
+    top: 0,
+    left: 0,
+    width: 375,
+    height: 742,
+    backgroundColor: "rgba(230, 230, 230,1)",
+    position: "absolute"
   },
-  image: {
-    marginTop: 50,
-    height: 100,
-    width: 100,
+  materialCardWithoutImage1: {
+    width: 351,
+    height: 443,
+    marginTop: 34,
+    marginLeft: 12
   },
+  materialIconTextButtonsFooter: {
+    top: 739,
+    width: 375,
+    height: 73,
+    position: "absolute",
+    left: 0
+  },
+  rectStack: {
+    width: 375,
+    height: 812
+  }
 });
