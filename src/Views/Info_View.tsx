@@ -33,16 +33,14 @@ const styles = StyleSheet.create({
   rect: {
     top: 0,
     left: 0,
-    width: 375,
-    height: 742,
     backgroundColor: "rgba(230, 230, 230,1)",
     position: "absolute"
   },
   materialCardWithoutImage1: {
-    width: 351,
     height: 443,
     marginTop: 34,
-    marginLeft: 12
+    marginLeft: 12,
+    marginRight: 12
   },
   materialIconTextButtonsFooter: {
     top: 739,
@@ -52,7 +50,5 @@ const styles = StyleSheet.create({
     left: 0
   },
   rectStack: {
-    width: 375,
-    height: 812
   }
 });
