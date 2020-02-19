@@ -7,7 +7,7 @@ import DownloadingView from './Downloading_View'
 import TypelistView from './Elements/Typelist_View'
 import { Ionicons } from '@expo/vector-icons';
 
-
+ 
 const Tab = createBottomTabNavigator();
 
 export default function Navigation() {
