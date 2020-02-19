@@ -1,7 +1,5 @@
-import React, { Component } from "react";
-import { StyleSheet, View } from "react-native";
-import MaterialCardWithoutImage1 from "../components/MaterialCardWithoutImage1";
-import MaterialIconTextButtonsFooter from "../components/MaterialIconTextButtonsFooter";
+import React from 'react'
+import { StyleSheet, Text, View } from 'react-native';
 
 export default class InfoView extends React.Component {
   constructor(props) {
@@ -10,49 +8,9 @@ export default class InfoView extends React.Component {
 
   render() {
     return (
-      <View style={styles.container}>
-        <View style={styles.rectStack}>
-          <View style={styles.rect}>
-            <MaterialCardWithoutImage1
-              style={styles.materialCardWithoutImage1}
-            ></MaterialCardWithoutImage1>
-          </View>
-          <MaterialIconTextButtonsFooter
-            style={styles.materialIconTextButtonsFooter}
-          ></MaterialIconTextButtonsFooter>
-        </View>
+      <View>
+        <Text>Bonjour</Text>
       </View>
     )
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1
-  },
-  rect: {
-    top: 0,
-    left: 0,
-    width: 375,
-    height: 742,
-    backgroundColor: "rgba(230, 230, 230,1)",
-    position: "absolute"
-  },
-  materialCardWithoutImage1: {
-    width: 351,
-    height: 443,
-    marginTop: 34,
-    marginLeft: 12
-  },
-  materialIconTextButtonsFooter: {
-    top: 739,
-    width: 375,
-    height: 73,
-    position: "absolute",
-    left: 0
-  },
-  rectStack: {
-    width: 375,
-    height: 812
-  }
-});
