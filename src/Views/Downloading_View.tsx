@@ -1,42 +1,42 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import { StyleSheet, Text, View, ImageBackground, Image, TouchableWithoutFeedback } from 'react-native';
 import { Animated, Easing } from 'react-native';
 import Icon from "react-native-vector-icons/Feather";
+
+import Dialog, { DialogContent } from 'react-native-popup-dialog';
+import { Button } from 'react-native'
+
+
 
 export default class DownloadingView extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      animationValue: new Animated.Value(180),
-      viewState: true
+      spinValue: new Animated.Value(0),
     }
   }
 
-  toggleAnimation = () => {
+  rotateSpring = () => {
+    this.state.spinValue.setValue(0);
+      Animated.spring(
+          this.state.spinValue,
+          {
+              toValue: 1,
+              friction: 1,
+          }
+      ).start();
 
-    if(this.state.viewState == true) {
-    Animated.timing(this.state.animationValue, {
-      toValue : 300,
-      timing : 1500
-    }).start(()=>{
-      this.setState({viewState : false})
-    });
-    }
-    else {
-      Animated.timing(this.state.animationValue, {
-        toValue : 180,
-        timing : 1500
-      }).start(this.setState({viewState: true})
-      );
-    }
-  }
+      setTimeout(() => {
+        this.setState({ visible: true });
+      }, 2000);
+  };
 
   render() {
 
-    const animatedStyle = {
-      width : this.state.animationValue,
-      height : this.state.animationValue
-    }
+    var spin = this.state.spinValue.interpolate({
+        inputRange: [0, 1],
+        outputRange: ['0deg', '360deg'],
+    });
 
     return (
 
@@ -44,17 +44,33 @@ export default class DownloadingView extends React.Component {
                 imageStyle={{ resizeMode: 'cover' }}
                 style={{ flex: 1 }}>
       <View style={styles.main_container}>
-        <TouchableWithoutFeedback>
-          <Animated.View style={[styles.animatedBox, animatedStyle]}>
-            <Icon name="arrow-down-circle" style={styles.icon}></Icon>
-          </Animated.View>
+      <TouchableWithoutFeedback onPress={this.rotateSpring}>
+      <Animated.View style={[styles.circle, {
+          transform: [{rotate: spin},]
+          }]}>
+            <Icon name="arrow-down-circle" style={styles.icon} ></Icon>
+            </Animated.View>
         </TouchableWithoutFeedback>
+      </View>
+
+      <View style={styles.container}>
+        <Dialog
+          visible={this.state.visible}
+          onTouchOutside={() => {
+            this.setState({ visible: false });
+          }}
+        >
+          <DialogContent>
+            <Text>Le chargement a échoué, veuillez réessayer</Text>
+          </DialogContent>
+        </Dialog>
       </View>
     </ImageBackground>
 
     )
   }
 }
+
 
 const styles = StyleSheet.create({
   icon: {
@@ -66,9 +82,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     padding: 12
-  },
-  animatedBox: {
-    width : 180,
-    height: 180
   }
 });
