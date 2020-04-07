@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { StyleSheet, View } from "react-native";
 import MaterialCardWithoutImage1 from "../components/MaterialCardWithoutImage1";
-import MaterialIconTextButtonsFooter from "../components/MaterialIconTextButtonsFooter";
 
 export default class InfoView extends React.Component {
   constructor(props) {
@@ -17,9 +16,6 @@ export default class InfoView extends React.Component {
               style={styles.materialCardWithoutImage1}
             ></MaterialCardWithoutImage1>
           </View>
-          <MaterialIconTextButtonsFooter
-            style={styles.materialIconTextButtonsFooter}
-          ></MaterialIconTextButtonsFooter>
         </View>
       </View>
     )
