@@ -25,9 +25,7 @@ const styles = StyleSheet.create({
 
 function Home({ navigation }) {
     return (
-      <ImageBackground source={require("./../background-boats-sailing-flat-design.jpg")}
-        imageStyle={{ resizeMode: 'cover' }}
-        style={{ flex: 1 }}>
+
         <View style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'stretch' }}>
           <FlatList
             data={[
@@ -54,13 +52,12 @@ function Home({ navigation }) {
                 </TouchableOpacity>
               )
             }
-  
+
             }
           />
-  
+
         </View>
-      </ImageBackground>
-    );
+s    );
   }
 
 export default class MyStack extends React.Component {

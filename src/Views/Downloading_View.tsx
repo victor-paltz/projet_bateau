@@ -13,6 +13,7 @@ export default class DownloadingView extends React.Component {
     super(props)
     this.state = {
       spinValue: new Animated.Value(0),
+      color: '#5abbce',
     }
   }
 
@@ -40,13 +41,11 @@ export default class DownloadingView extends React.Component {
 
     return (
 
-    <ImageBackground source={require("./background-boats-sailing-flat-design.jpg")}
-                imageStyle={{ resizeMode: 'cover' }}
-                style={{ flex: 1 }}>
       <View style={styles.main_container}>
       <TouchableWithoutFeedback onPress={this.rotateSpring}>
       <Animated.View style={[styles.circle, {
-          transform: [{rotate: spin},]
+          transform: [{rotate: spin},],
+          backgroundColor: this.state.color
           }]}>
             <Icon name="arrow-down-circle" style={styles.icon} ></Icon>
             </Animated.View>
@@ -65,7 +64,6 @@ export default class DownloadingView extends React.Component {
           </DialogContent>
         </Dialog>
       </View>
-    </ImageBackground>
 
     )
   }
