@@ -13,7 +13,6 @@ export default class DownloadingView extends React.Component {
     super(props)
     this.state = {
       spinValue: new Animated.Value(0),
-      color: '#5abbce',
     }
   }
 
@@ -40,12 +39,11 @@ export default class DownloadingView extends React.Component {
     });
 
     return (
-
+      <>
       <View style={styles.main_container}>
       <TouchableWithoutFeedback onPress={this.rotateSpring}>
       <Animated.View style={[styles.circle, {
-          transform: [{rotate: spin},],
-          backgroundColor: this.state.color
+          transform: [{rotate: spin},]
           }]}>
             <Icon name="arrow-down-circle" style={styles.icon} ></Icon>
             </Animated.View>
@@ -64,7 +62,7 @@ export default class DownloadingView extends React.Component {
           </DialogContent>
         </Dialog>
       </View>
-
+      </>
     )
   }
 }

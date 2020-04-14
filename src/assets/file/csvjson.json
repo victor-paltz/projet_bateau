@@ -1,0 +1,517 @@
+[
+  {
+    "BIGRAMME": "AA",
+    "LIBELLE": "TOURELLE 76/62 SUPER RAPIDE",
+    "FONCTION": "armes"
+  },
+  {
+    "BIGRAMME": "AB",
+    "LIBELLE": "ARTILLERIE A COURTE PORTEE ET MUNITION",
+    "FONCTION": "armes"
+  },
+  {
+    "BIGRAMME": "AC",
+    "LIBELLE": "CAISSON 20MM",
+    "FONCTION": "armes"
+  },
+  {
+    "BIGRAMME": "AK",
+    "LIBELLE": "CONDUITE DE TIR",
+    "FONCTION": "armes"
+  },
+  {
+    "BIGRAMME": "AM",
+    "LIBELLE": "GESTION DU SYSTEME DE LANCEMENT DES MISSILES ASTER",
+    "FONCTION": "armes"
+  },
+  {
+    "BIGRAMME": "AS",
+    "LIBELLE": "GESTION DU SYSTEME DE LANCEMENT DES MISSILES SCALP",
+    "FONCTION": "armes"
+  },
+  {
+    "BIGRAMME": "AT",
+    "LIBELLE": "SYSTEME LANCEMENT TORPILLE",
+    "FONCTION": "armes"
+  },
+  {
+    "BIGRAMME": "AY",
+    "LIBELLE": "EWMLS",
+    "FONCTION": "armes"
+  },
+  {
+    "BIGRAMME": "BA",
+    "LIBELLE": "REVETEMENTS DE PONT AUTRES QUE PEINTURE",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "BB",
+    "LIBELLE": "ELEMENTS D'EMMENAGEMENT",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "BC",
+    "LIBELLE": "PROTECTION CATHODIQUE (PCCI)",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "BE",
+    "LIBELLE": "ELEMENTS DIVERS COQUE",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "BU",
+    "LIBELLE": "SUPERSTRUCTURES",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "BZ",
+    "LIBELLE": "PROTECTION DES ACCES",
+    "FONCTION": "transmission"
+  },
+  {
+    "BIGRAMME": "DL",
+    "LIBELLE": "RADAR MULTIFONCTIONS / IFF",
+    "FONCTION": "detection"
+  },
+  {
+    "BIGRAMME": "DV",
+    "LIBELLE": "SYSTEME DE DETECTION ET DE PISTAGE INFRAROUGE FREMM",
+    "FONCTION": "detection"
+  },
+  {
+    "BIGRAMME": "EA",
+    "LIBELLE": "RESEAU HAUTE TENSION 6,6 KV",
+    "FONCTION": "energie"
+  },
+  {
+    "BIGRAMME": "EB",
+    "LIBELLE": "RESEAU DE SECOURS",
+    "FONCTION": "energie"
+  },
+  {
+    "BIGRAMME": "ED",
+    "LIBELLE": "GROUPE DIESEL-ALTERNATEUR - ASPIRATIONS D'AIR ET ECHAPPEMENTS HT",
+    "FONCTION": "energie"
+  },
+  {
+    "BIGRAMME": "EE",
+    "LIBELLE": "ECLAIRAGE BORD - RESEAUX D'ECLAIRAGE SPECIAUX",
+    "FONCTION": "energie"
+  },
+  {
+    "BIGRAMME": "EF",
+    "LIBELLE": "RESEAU BT 60 HZ - DISTRIB. 440 ET 115 V.",
+    "FONCTION": "energie"
+  },
+  {
+    "BIGRAMME": "EP",
+    "LIBELLE": "INSTALLATION IMMUNISATION",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "ES",
+    "LIBELLE": "FEUX NAVIGATION",
+    "FONCTION": "navigation"
+  },
+  {
+    "BIGRAMME": "EW",
+    "LIBELLE": "RESEAU ELECTRO-DOMESTIQUE 220 V - 60 HZ",
+    "FONCTION": "energie"
+  },
+  {
+    "BIGRAMME": "GA",
+    "LIBELLE": "SYSTEME LANCE-LEURRES ANTI SOUS-MARIN",
+    "FONCTION": "armes"
+  },
+  {
+    "BIGRAMME": "GB",
+    "LIBELLE": "RADAR CONTRE-MESURES (RECM)",
+    "FONCTION": "detection"
+  },
+  {
+    "BIGRAMME": "GD",
+    "LIBELLE": "SYSTEME DE SURVEILLANCE RADIO-ELECTRIQUE RADAR (RESM) AVT",
+    "FONCTION": "detection"
+  },
+  {
+    "BIGRAMME": "GL",
+    "LIBELLE": "SYSTEME LANCE LEURRES",
+    "FONCTION": "detection"
+  },
+  {
+    "BIGRAMME": "GT",
+    "LIBELLE": "INTERCEPTION, ECOUTE, BROUILLAGE DES COMMUNICATIONS (CESM)",
+    "FONCTION": "detection"
+  },
+  {
+    "BIGRAMME": "HH",
+    "LIBELLE": "STOCKAGE ET MAINTENANCE DE L'HELICO",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "HK",
+    "LIBELLE": "INSTALLATION CARBUREACTEUR",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "HL",
+    "LIBELLE": "MANUTENTION DE L'HELICO",
+    "FONCTION": "armes"
+  },
+  {
+    "BIGRAMME": "HR",
+    "LIBELLE": "INSTALLATION HR",
+    "FONCTION": "detection"
+  },
+  {
+    "BIGRAMME": "HS",
+    "LIBELLE": "INSTALLATIONS ELECTRIQUES RELATIVES A L'APPONTAGE DES HELICOPTERES",
+    "FONCTION": "energie"
+  },
+  {
+    "BIGRAMME": "HV",
+    "LIBELLE": "LOCAUX D'EXPLOITATION AVIA",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "HX",
+    "LIBELLE": "INSTALLATION MECANIQUE RELATIVE A L'APPONTAGE DES HELICOPTERES",
+    "FONCTION": "armes"
+  },
+  {
+    "BIGRAMME": "HY",
+    "LIBELLE": "INSTALLATION ENSEMBLE DES CADRES RABATTABLES",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "MB",
+    "LIBELLE": "LIGNES D'ARBRES / HELICES",
+    "FONCTION": "propulsion"
+  },
+  {
+    "BIGRAMME": "ME",
+    "LIBELLE": "EQUIPEMENTS ELECTRIQUES DE PROPULSION",
+    "FONCTION": "propulsion"
+  },
+  {
+    "BIGRAMME": "ML",
+    "LIBELLE": "PROPULSION AUXILIAIRE",
+    "FONCTION": "propulsion"
+  },
+  {
+    "BIGRAMME": "MO",
+    "LIBELLE": "SYSTEME DE CONDUITE DE LA PROPULSION PRINCIPALE",
+    "FONCTION": "propulsion"
+  },
+  {
+    "BIGRAMME": "MP",
+    "LIBELLE": "REDUCTEUR",
+    "FONCTION": "propulsion"
+  },
+  {
+    "BIGRAMME": "MT",
+    "LIBELLE": "TURBINE A GAZ",
+    "FONCTION": "propulsion"
+  },
+  {
+    "BIGRAMME": "NB",
+    "LIBELLE": "SYSTEME DE NAVIGATION BASIQUE",
+    "FONCTION": "navigation"
+  },
+  {
+    "BIGRAMME": "NH",
+    "LIBELLE": "RADAR HELICOPTERE",
+    "FONCTION": "detection"
+  },
+  {
+    "BIGRAMME": "NI",
+    "LIBELLE": "SYSTEME DE DONNEES NAVIGATION",
+    "FONCTION": "navigation"
+  },
+  {
+    "BIGRAMME": "NN",
+    "LIBELLE": "SYSTEME DE RADIONAVIGATION",
+    "FONCTION": "navigation"
+  },
+  {
+    "BIGRAMME": "NR",
+    "LIBELLE": "RADARS DE NAVIGATION",
+    "FONCTION": "detection"
+  },
+  {
+    "BIGRAMME": "NS",
+    "LIBELLE": "SOUS-SYSTEME TELESURVEILLANCE (CCTV)",
+    "FONCTION": "transmission"
+  },
+  {
+    "BIGRAMME": "NV",
+    "LIBELLE": "SYSTEME DE VISUALISATION DONNEES DE NAV",
+    "FONCTION": "navigation"
+  },
+  {
+    "BIGRAMME": "NW",
+    "LIBELLE": "SYSTEME ENVIRONNEMENT AIR ET EAU",
+    "FONCTION": "navigation"
+  },
+  {
+    "BIGRAMME": "OO",
+    "LIBELLE": "IPMS ET OCMS",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "QB",
+    "LIBELLE": "APPAREIL A GOUVERNER - RUDDER ROLL",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "QC",
+    "LIBELLE": "CUISINE, BOULANGERIE, DEPENDANCES (COMMISSARY SPACES)",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "QD",
+    "LIBELLE": "INSTALLATIONS D'AMARRAGE ET DE REMORQUAGE",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "QE",
+    "LIBELLE": "MISE EN RUVRE DES EMBARCATIONS LATERALES",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "QG",
+    "LIBELLE": "APPARAUX DE MANOEUVRE",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "QH",
+    "LIBELLE": "LOCAUX HYGIENE (SANITARY SPACES)",
+    "FONCTION": "securite"
+  },
+  {
+    "BIGRAMME": "QI",
+    "LIBELLE": "EAUX NOIRES ET EAUX GRISES",
+    "FONCTION": "securite"
+  },
+  {
+    "BIGRAMME": "QJ",
+    "LIBELLE": "TRAITEMENT DU LINGE (LAUNDRY SPACES)",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "QK",
+    "LIBELLE": "TRAITEMENT EAUX HYDROCARBUREES",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "QL",
+    "LIBELLE": "AUTRES APPAREILS DE LEVAGE ET DE MANUTENTION",
+    "FONCTION": "securite"
+  },
+  {
+    "BIGRAMME": "QM",
+    "LIBELLE": "INSTALLATIONS DE MOUILLAGE",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "QR",
+    "LIBELLE": "INSTALLATION DE R.A.M.",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "QV",
+    "LIBELLE": "STOCKAGE ET REFRIGERATION DES VIVRES",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "SA",
+    "LIBELLE": "AIR COMPRIME HP (MP ET BP), ACTIONNEURS PNEUMATIQUES",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "SC",
+    "LIBELLE": "VCCA, DESHUMIDIFICATION",
+    "FONCTION": "securite"
+  },
+  {
+    "BIGRAMME": "SD",
+    "LIBELLE": "EAU DOUCE CHAUDE ET FROIDE SERVICE GENERAL - EAU DEMINERALISEE",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "SE",
+    "LIBELLE": "PROTECTION CONTRE LES VOIES D'EAU",
+    "FONCTION": "securite"
+  },
+  {
+    "BIGRAMME": "SG",
+    "LIBELLE": "GAZOLE",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "SI",
+    "LIBELLE": "PROTECTION CONTRE L'INCENDIE",
+    "FONCTION": "securite"
+  },
+  {
+    "BIGRAMME": "SJ",
+    "LIBELLE": "EAU DOUCE REFRIGEREE A 6 DEGC",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "SL",
+    "LIBELLE": "LUBRIFIANTS",
+    "FONCTION": "propulsion"
+  },
+  {
+    "BIGRAMME": "SM",
+    "LIBELLE": "EAU DE MER : INCENDIE, LAVAGE, REFRIGERATION AUXILIAIRES",
+    "FONCTION": "securite"
+  },
+  {
+    "BIGRAMME": "SN",
+    "LIBELLE": "PROTECTION CONTRE AGRESSIFS NBC",
+    "FONCTION": "securite"
+  },
+  {
+    "BIGRAMME": "SU",
+    "LIBELLE": "REDRESSEMENT",
+    "FONCTION": "securite"
+  },
+  {
+    "BIGRAMME": "TA",
+    "LIBELLE": "TELEPHONIE-VISIOCONFERENCE",
+    "FONCTION": "transmission"
+  },
+  {
+    "BIGRAMME": "TC",
+    "LIBELLE": "DISTRIBUTION-GESTION",
+    "FONCTION": "transmission"
+  },
+  {
+    "BIGRAMME": "TD",
+    "LIBELLE": "LIAISON DE DONNEES TACTIQUES",
+    "FONCTION": "transmission"
+  },
+  {
+    "BIGRAMME": "TG",
+    "LIBELLE": "SOUS-SYSTEME TELEPHONE AUTO GENERATEUR",
+    "FONCTION": "transmission"
+  },
+  {
+    "BIGRAMME": "TI",
+    "LIBELLE": "TERMINAL UTILISATEUR",
+    "FONCTION": "transmission"
+  },
+  {
+    "BIGRAMME": "TL",
+    "LIBELLE": "COMMUNICATIONS SATELLITES",
+    "FONCTION": "transmission"
+  },
+  {
+    "BIGRAMME": "TO",
+    "LIBELLE": "DIFFUSION ORDRES ALARMES",
+    "FONCTION": "transmission"
+  },
+  {
+    "BIGRAMME": "TR",
+    "LIBELLE": "HF",
+    "FONCTION": "transmission"
+  },
+  {
+    "BIGRAMME": "TS",
+    "LIBELLE": "SOUS-SYSTEME COMMUNICATIONS VOCALES MOBILES",
+    "FONCTION": "transmission"
+  },
+  {
+    "BIGRAMME": "TU",
+    "LIBELLE": "TELEBRIEFING",
+    "FONCTION": "transmission"
+  },
+  {
+    "BIGRAMME": "TV",
+    "LIBELLE": "DISTRACTION",
+    "FONCTION": "transmission"
+  },
+  {
+    "BIGRAMME": "TX",
+    "LIBELLE": "INSTALLATION TX",
+    "FONCTION": "transmission"
+  },
+  {
+    "BIGRAMME": "UC",
+    "LIBELLE": "SONAR D'ETRAVE",
+    "FONCTION": "detection"
+  },
+  {
+    "BIGRAMME": "UR",
+    "LIBELLE": "SONAR A IMMERSION VARIABLE",
+    "FONCTION": "detection"
+  },
+  {
+    "BIGRAMME": "UT",
+    "LIBELLE": "TELEPHONE SOUS-MARIN",
+    "FONCTION": "detection"
+  },
+  {
+    "BIGRAMME": "VA",
+    "LIBELLE": "ATELIERS (WORKSHOPS)",
+    "FONCTION": "flotteur"
+  },
+  {
+    "BIGRAMME": "VF",
+    "LIBELLE": "FERMETURES DIVERSES",
+    "FONCTION": "securite"
+  },
+  {
+    "BIGRAMME": "VH",
+    "LIBELLE": "INFIRMERIE ET CIRCUITS OXYGENOTHERAPIE",
+    "FONCTION": "securite"
+  },
+  {
+    "BIGRAMME": "VI",
+    "LIBELLE": "LOCAUX VIE",
+    "FONCTION": "securite"
+  },
+  {
+    "BIGRAMME": "VJ",
+    "LIBELLE": "ZONE RESTAURATION",
+    "FONCTION": "securite"
+  },
+  {
+    "BIGRAMME": "VL",
+    "LIBELLE": "MOBILIERS STANDARDS D'AMENAGEMENT ET MOBILIER EN COURSIVE",
+    "FONCTION": "detection"
+  },
+  {
+    "BIGRAMME": "VM",
+    "LIBELLE": "EQUIPEMENTS DE MATURE",
+    "FONCTION": "transmission"
+  },
+  {
+    "BIGRAMME": "VS",
+    "LIBELLE": "LOCAUX DIVERS",
+    "FONCTION": "detection"
+  },
+  {
+    "BIGRAMME": "WD",
+    "LIBELLE": "CMD SUPPORT SYSTEM",
+    "FONCTION": "detection"
+  },
+  {
+    "BIGRAMME": "WP",
+    "LIBELLE": "CONDUITE NAUTIQUE IBS",
+    "FONCTION": "navigation"
+  },
+  {
+    "BIGRAMME": "WT",
+    "LIBELLE": "INSTALLATION CMS",
+    "FONCTION": "detection"
+  },
+  {
+    "BIGRAMME": "WU",
+    "LIBELLE": "INS NAVIRE",
+    "FONCTION": "transmission"
+  }
+]

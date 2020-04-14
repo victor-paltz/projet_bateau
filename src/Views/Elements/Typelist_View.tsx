@@ -34,14 +34,15 @@ function Home({ navigation }) {
             { key: 'Énergie', logo: 'ios-battery-full', alert: "no" },
             { key: 'Flotteur', logo: 'md-boat', alert: "no" },
             { key: 'Navigation', logo: 'md-compass', alert: "no" },
-            { key: 'Propultion', logo: 'md-speedometer', alert: "no" },
+            { key: 'Propulsion', logo: 'md-speedometer', alert: "no" },
             { key: 'Sécurité', logo: 'md-lock', alert: "no" },
             { key: 'Transmission', logo: 'md-git-compare', alert: "no" },
           ]}
           style={{ flex: 1 }}
           renderItem={({ item }) => {
             return (
-              <TouchableOpacity onPress={() => navigation.navigate('Machines')} style={[styles.item,
+              <TouchableOpacity onPress={() => navigation.navigate("Machines", {Bonjour:'zbfrhb'})}
+              style={[styles.item,
               { backgroundColor: item.alert == "yes" ? "rgba(186, 13, 39, .94)" : "rgba(22, 171, 9, .94)" }]} >
                 <View style={{ flex: 1, flexDirection: 'row' }}>
                   <Ionicons name={item.logo} size={30} color={"white"} />
