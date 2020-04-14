@@ -30,12 +30,12 @@ function Home({ navigation }) {
       <FlatList
         data={[
           { key: 'Armes', logo: 'ios-locate', alert: "yes" },
-          { key: 'Détection', logo: 'ios-radio', alert: "yes" },
+          { key: 'Détection', logo: 'ios-radio', alert: "no" },
           { key: 'Énergie', logo: 'ios-battery-full', alert: "no" },
-          { key: 'Flotteur', logo: 'md-boat', alert: "no" },
+          { key: 'Flotteur', logo: 'md-boat', alert: "yes" },
           { key: 'Navigation', logo: 'md-compass', alert: "no" },
-          { key: 'Propulsion', logo: 'md-speedometer', alert: "no" },
-          { key: 'Sécurité', logo: 'md-lock', alert: "yes" },
+          { key: 'Propulsion', logo: 'md-speedometer', alert: "yes" },
+          { key: 'Sécurité', logo: 'md-lock', alert: "no" },
           { key: 'Transmission', logo: 'md-git-compare', alert: "no" },
         ]}
         style={{ flex: 1 }}

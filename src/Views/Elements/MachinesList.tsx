@@ -4,44 +4,11 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Element_View from './Element_View';
 import { Ionicons } from '@expo/vector-icons';
 import EquipmentDashboard from './EquipmentDashboard';
+import * as database from './database.json';
 
 import armsfile from '../../assets/file/csvjson.json'
 
 const Stack = createStackNavigator();
-
-const database = {
-  Armes:
-    [{ name: "arme1", max_val: 10, values: [2, 4, 7, 8, 12, 3, 5] },
-    { name: "arme2", max_val: 20, values: [2, 4, 7, 8, 12, 3, 5] }]
-  ,
-  Détection:
-    [{ name: "arme1", max_val: 10, values: [2, 4, 7, 8, 12, 3, 5] },
-    { name: "arme2", max_val: 20, values: [2, 4, 7, 8, 12, 3, 5] }]
-  ,
-  Énergie:
-    [{ name: "arme1", max_val: 10, values: [2, 4, 7, 8, 12, 3, 5] },
-    { name: "arme2", max_val: 20, values: [2, 4, 7, 8, 12, 3, 5] }]
-  ,
-  Flotteur:
-    [{ name: "arme1", max_val: 10, values: [2, 4, 7, 8, 12, 3, 5] },
-    { name: "arme2", max_val: 20, values: [2, 4, 7, 8, 12, 3, 5] }]
-  ,
-  Navigation:
-    [{ name: "arme1", max_val: 10, values: [2, 4, 7, 8, 12, 3, 5] },
-    { name: "arme2", max_val: 20, values: [2, 4, 7, 8, 12, 3, 5] }]
-  ,
-  Propulsion:
-    [{ name: "arme1", max_val: 10, values: [2, 4, 7, 8, 12, 3, 5] },
-    { name: "arme2", max_val: 20, values: [2, 4, 7, 8, 12, 3, 5] }]
-  ,
-  Sécurité:
-    [{ name: "arme1", max_val: 10, values: [2, 4, 7, 8, 12, 3, 5] },
-    { name: "arme2", max_val: 20, values: [2, 4, 7, 8, 12, 3, 5] }]
-  ,
-  Transmission:
-    [{ name: "arme1", max_val: 10, values: [2, 4, 7, 8, 12, 3, 5] },
-    { name: "arme2", max_val: 20, values: [2, 4, 7, 8, 12, 3, 5] }]
-}
 
 const styles = StyleSheet.create({
   container: {
@@ -107,12 +74,14 @@ class Home extends React.Component {
           style={{ flex: 1 }}
           renderItem={({ item }) => {
             return (
-              <TouchableOpacity onPress={() => this.props.navigation.navigate('Dashboard', {
-                values: item.values,
-                max_val: item.max_val,
-                name: item.name
-              })} style={[styles.item,
-              { backgroundColor: Math.max(...item.values) >= item.max_val ? "rgba(186, 13, 39, .94)" : "rgba(22, 171, 9, .94)" }]} >
+              <TouchableOpacity
+                key={item.name}
+                onPress={() => this.props.navigation.navigate('Dashboard', {
+                  values: item.values,
+                  max_val: item.max_val,
+                  name: item.name
+                })} style={[styles.item,
+                { backgroundColor: Math.max(...item.values) >= item.max_val ? "rgba(186, 13, 39, .94)" : "rgba(22, 171, 9, .94)" }]} >
                 <View style={{ flex: 1, flexDirection: 'row' }}>
                   <Ionicons name={this.state.logo} size={30} color={"white"} />
                   <View style={{ flexDirection: 'column' }}>

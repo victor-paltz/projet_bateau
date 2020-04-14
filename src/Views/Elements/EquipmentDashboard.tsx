@@ -11,7 +11,7 @@ const screenWidth = Dimensions.get("window").width;
 export default class EquipmentDashboard extends React.Component {
     constructor(props) {
         super(props)
-        console.log(props.route.params);
+        //console.log(props.route.params);
     }
 
     render() {
@@ -37,23 +37,6 @@ export default class EquipmentDashboard extends React.Component {
         for (var i = 0; i < Math.min(dates.length, this.props.route.params.values.length); i++) {
             data.push({ value: this.props.route.params.values[i], date: dates[i] })
         }
-
-        // const data = [
-        //     { value: 10, date: dateFns.setHours(new Date(2018, 1, 1), 6) },
-        //     { value: 12, date: dateFns.setHours(new Date(2018, 1, 1), 7) },
-        //     { value: 13, date: dateFns.setHours(new Date(2018, 1, 3), 8) },
-        //     { value: 17, date: dateFns.setHours(new Date(2018, 1, 5), 11) },
-        //     { value: 12, date: dateFns.setHours(new Date(2018, 1, 7), 8) },
-        //     { value: 9, date: dateFns.setHours(new Date(2018, 1, 9), 23) },
-        //     { value: 8, date: dateFns.setHours(new Date(2018, 1, 11), 11) },
-        //     { value: 9, date: dateFns.setHours(new Date(2018, 1, 13), 12) },
-        //     { value: 15, date: dateFns.setHours(new Date(2018, 1, 17), 10) },
-        //     { value: 35, date: dateFns.setHours(new Date(2018, 1, 19), 12) },
-        //     { value: 70, date: dateFns.setHours(new Date(2018, 1, 21), 11) },
-        //     { value: 24, date: dateFns.setHours(new Date(2018, 1, 23), 10) },
-        //     { value: 14, date: dateFns.setHours(new Date(2018, 1, 25), 16) },
-        //     { value: 11, date: dateFns.setHours(new Date(2018, 1, 28), 16) },
-        //     { value: 12, date: dateFns.setHours(new Date(2018, 1, 29), 13) }];
 
         const limit = 50;
 
@@ -116,6 +99,22 @@ export default class EquipmentDashboard extends React.Component {
                     </View>
 
                 </View >
+                {Math.max(...this.props.route.params.values) >= this.props.route.params.max_val ?
+                    <Text style={{
+                        fontSize: 20,
+                        backgroundColor: "rgba(186, 13, 39, .94)",
+                        textAlign: 'center'
+                    }}>{`Valeur du capteur anormale, seuil limite autorisé à ${this.props.route.params.max_val}`}</Text>
+                    :
+                    <Text style={{
+                        fontSize: 20,
+                        backgroundColor: "rgba(22, 171, 9, .94)",
+                        textAlign: 'center'
+                    }}>{`Pas d'anomalies, seuil limite autorisé à ${this.props.route.params.max_val}`}:</Text>
+
+                }
+
+
                 <Button title="Retour" onPress={() => this.props.navigation.goBack()} />
             </View>
         )
