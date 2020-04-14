@@ -41,24 +41,10 @@ class Home extends React.Component {
     // console.log(database[this.state.type])
   }
 
-
-  // componentWillMount() {
-
-
-  //   console.log(this.state)
-
-  //   /*const {fonction, logo} = this.props.route.params
-  //   console.log(fonction)
-  //   armsfile.forEach((item, index) => {
-  //     if (item.FONCTION == fonction) {
-  //     listarms.push({ key: item.LIBELLE, logo: logo, alert: "no" });
-  //   }
-  // });*/
-  // }
-
   render() {
     return (
-      <View style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'stretch' }}>
+      <View key={this.props.route.params.type + "_mainview"}
+        style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'stretch' }}>
         <FlatList
           /*data={[
             { key: this.state.bonjour, logo: 'ios-locate', alert: "no" },
@@ -70,6 +56,7 @@ class Home extends React.Component {
             { key: 'Securité', logo: 'md-lock', alert: "yes" },
             { key: 'Transmission', logo: 'md-git-compare', alert: "no" },
           ]}*/
+          key={this.props.route.params.type + "_flatlist"}
           data={database[this.state.type]}
           style={{ flex: 1 }}
           renderItem={({ item }) => {
@@ -82,10 +69,10 @@ class Home extends React.Component {
                   name: item.name
                 })} style={[styles.item,
                 { backgroundColor: Math.max(...item.values) >= item.max_val ? "rgba(186, 13, 39, .94)" : "rgba(22, 171, 9, .94)" }]} >
-                <View style={{ flex: 1, flexDirection: 'row' }}>
-                  <Ionicons name={this.state.logo} size={30} color={"white"} />
-                  <View style={{ flexDirection: 'column' }}>
-                    <Text style={{ fontSize: 20, paddingLeft: 20, color: "white" }}>{`${item.name}`}</Text>
+                <View key={item.name + "1"} style={{ flex: 1, flexDirection: 'row' }}>
+                  <Ionicons key={item.name + "_icon"} name={this.state.logo} size={30} color={"white"} />
+                  <View key={item.name + "2"} style={{ flexDirection: 'column' }}>
+                    <Text key={item.name + "_text"} style={{ fontSize: 20, paddingLeft: 20, color: "white" }}>{`${item.name}`}</Text>
                   </View>
                 </View>
               </TouchableOpacity>
