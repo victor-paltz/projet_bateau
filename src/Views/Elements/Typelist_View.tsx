@@ -29,13 +29,13 @@ function Home({ navigation }) {
       <View style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'stretch' }}>
         <FlatList
           data={[
-            { key: 'Armes', logo: 'ios-locate', alert: "no" },
+            { key: 'Armes', logo: 'ios-locate', alert: "yes" },
             { key: 'Détection', logo: 'ios-radio', alert: "yes" },
             { key: 'Énergie', logo: 'ios-battery-full', alert: "no" },
             { key: 'Flotteur', logo: 'md-boat', alert: "no" },
             { key: 'Navigation', logo: 'md-compass', alert: "no" },
             { key: 'Propulsion', logo: 'md-speedometer', alert: "no" },
-            { key: 'Sécurité', logo: 'md-lock', alert: "no" },
+            { key: 'Sécurité', logo: 'md-lock', alert: "yes" },
             { key: 'Transmission', logo: 'md-git-compare', alert: "no" },
           ]}
           style={{ flex: 1 }}
@@ -92,7 +92,7 @@ export default class MyStack extends React.Component {
           name="Machines"
           component={MachinesList}
           options={{
-            title: 'Machines available',
+            title: 'Équipement disponible',
           }}
         />
         <Stack.Screen
