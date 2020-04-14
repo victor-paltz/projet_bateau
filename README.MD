@@ -1,4 +1,13 @@
-#Boat Project
+# Boat Project
+
+## Installing dependencies
+
+Run the following commands in order to install the node modules
+
+```bash
+yarn install package.json
+expo install yarn.lock
+```
 
 ## Run the project:
 
