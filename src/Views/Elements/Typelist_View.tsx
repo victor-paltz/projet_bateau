@@ -26,38 +26,43 @@ const styles = StyleSheet.create({
 
 function Home({ navigation }) {
   return (
-      <View style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'stretch' }}>
-        <FlatList
-          data={[
-            { key: 'Armes', logo: 'ios-locate', alert: "yes" },
-            { key: 'Détection', logo: 'ios-radio', alert: "yes" },
-            { key: 'Énergie', logo: 'ios-battery-full', alert: "no" },
-            { key: 'Flotteur', logo: 'md-boat', alert: "no" },
-            { key: 'Navigation', logo: 'md-compass', alert: "no" },
-            { key: 'Propulsion', logo: 'md-speedometer', alert: "no" },
-            { key: 'Sécurité', logo: 'md-lock', alert: "yes" },
-            { key: 'Transmission', logo: 'md-git-compare', alert: "no" },
-          ]}
-          style={{ flex: 1 }}
-          renderItem={({ item }) => {
-            return (
-              <TouchableOpacity onPress={() => navigation.navigate("Machines", {Bonjour:'zbfrhb'})}
+    <View style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'stretch' }}>
+      <FlatList
+        data={[
+          { key: 'Armes', logo: 'ios-locate', alert: "yes" },
+          { key: 'Détection', logo: 'ios-radio', alert: "yes" },
+          { key: 'Énergie', logo: 'ios-battery-full', alert: "no" },
+          { key: 'Flotteur', logo: 'md-boat', alert: "no" },
+          { key: 'Navigation', logo: 'md-compass', alert: "no" },
+          { key: 'Propulsion', logo: 'md-speedometer', alert: "no" },
+          { key: 'Sécurité', logo: 'md-lock', alert: "yes" },
+          { key: 'Transmission', logo: 'md-git-compare', alert: "no" },
+        ]}
+        style={{ flex: 1 }}
+        renderItem={({ item }) => {
+          return (
+            <TouchableOpacity onPress={() => navigation.navigate("Machines", {
+              screen: 'Home', params: {
+                logo: item.logo,
+                type: item.key
+              }
+            })}
               style={[styles.item,
               { backgroundColor: item.alert == "yes" ? "rgba(186, 13, 39, .94)" : "rgba(22, 171, 9, .94)" }]} >
-                <View style={{ flex: 1, flexDirection: 'row' }}>
-                  <Ionicons name={item.logo} size={30} color={"white"} />
-                  <View style={{ flexDirection: 'column' }}>
-                    <Text style={{ fontSize: 20, paddingLeft: 20, color: "white" }}>{`${item.key}`}</Text>
-                  </View>
+              <View style={{ flex: 1, flexDirection: 'row' }}>
+                <Ionicons name={item.logo} size={30} color={"white"} />
+                <View style={{ flexDirection: 'column' }}>
+                  <Text style={{ fontSize: 20, paddingLeft: 20, color: "white" }}>{`${item.key}`}</Text>
                 </View>
-              </TouchableOpacity>
-            )
-          }
+              </View>
+            </TouchableOpacity>
+          )
+        }
 
-          }
-        />
+        }
+      />
 
-      </View>
+    </View>
   );
 }
 
@@ -91,6 +96,7 @@ export default class MyStack extends React.Component {
         <Stack.Screen
           name="Machines"
           component={MachinesList}
+          initialParams={{ itemId: 42 }}
           options={{
             title: 'Équipement disponible',
           }}

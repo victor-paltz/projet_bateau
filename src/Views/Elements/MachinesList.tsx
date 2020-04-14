@@ -9,6 +9,40 @@ import armsfile from '../../assets/file/csvjson.json'
 
 const Stack = createStackNavigator();
 
+const database = {
+  Armes:
+    [{ name: "arme1", max_val: 10, values: [2, 4, 7, 8, 12, 3, 5] },
+    { name: "arme2", max_val: 20, values: [2, 4, 7, 8, 12, 3, 5] }]
+  ,
+  Détection:
+    [{ name: "arme1", max_val: 10, values: [2, 4, 7, 8, 12, 3, 5] },
+    { name: "arme2", max_val: 20, values: [2, 4, 7, 8, 12, 3, 5] }]
+  ,
+  Énergie:
+    [{ name: "arme1", max_val: 10, values: [2, 4, 7, 8, 12, 3, 5] },
+    { name: "arme2", max_val: 20, values: [2, 4, 7, 8, 12, 3, 5] }]
+  ,
+  Flotteur:
+    [{ name: "arme1", max_val: 10, values: [2, 4, 7, 8, 12, 3, 5] },
+    { name: "arme2", max_val: 20, values: [2, 4, 7, 8, 12, 3, 5] }]
+  ,
+  Navigation:
+    [{ name: "arme1", max_val: 10, values: [2, 4, 7, 8, 12, 3, 5] },
+    { name: "arme2", max_val: 20, values: [2, 4, 7, 8, 12, 3, 5] }]
+  ,
+  Propulsion:
+    [{ name: "arme1", max_val: 10, values: [2, 4, 7, 8, 12, 3, 5] },
+    { name: "arme2", max_val: 20, values: [2, 4, 7, 8, 12, 3, 5] }]
+  ,
+  Sécurité:
+    [{ name: "arme1", max_val: 10, values: [2, 4, 7, 8, 12, 3, 5] },
+    { name: "arme2", max_val: 20, values: [2, 4, 7, 8, 12, 3, 5] }]
+  ,
+  Transmission:
+    [{ name: "arme1", max_val: 10, values: [2, 4, 7, 8, 12, 3, 5] },
+    { name: "arme2", max_val: 20, values: [2, 4, 7, 8, 12, 3, 5] }]
+}
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
@@ -29,30 +63,35 @@ var listarms = []
 
 class Home extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
+    //console.log(props)
+    this.state = {
+      logo: this.props.route.params.logo,
+      type: this.props.route.params.type
+    };
+
+    // console.log(this.state.type)
+    // console.log(database[this.state.type])
   }
 
-  componentDidMount() {
-    //const { item } = route.params
-    const { Bonjour } = this.props.route
-    console.log(Bonjour)
-    /*const {fonction, logo} = this.props.route.params
-    console.log(fonction)
-    armsfile.forEach((item, index) => {
-      if (item.FONCTION == fonction) {
-      listarms.push({ key: item.LIBELLE, logo: logo, alert: "no" });
-    }
-  });*/
-  }
+
+  // componentWillMount() {
+
+
+  //   console.log(this.state)
+
+  //   /*const {fonction, logo} = this.props.route.params
+  //   console.log(fonction)
+  //   armsfile.forEach((item, index) => {
+  //     if (item.FONCTION == fonction) {
+  //     listarms.push({ key: item.LIBELLE, logo: logo, alert: "no" });
+  //   }
+  // });*/
+  // }
 
   render() {
-
-
-
     return (
-
       <View style={{ flex: 1, justifyContent: 'flex-start', alignItems: 'stretch' }}>
-
         <FlatList
           /*data={[
             { key: this.state.bonjour, logo: 'ios-locate', alert: "no" },
@@ -64,16 +103,20 @@ class Home extends React.Component {
             { key: 'Securité', logo: 'md-lock', alert: "yes" },
             { key: 'Transmission', logo: 'md-git-compare', alert: "no" },
           ]}*/
-          data={listarms}
+          data={database[this.state.type]}
           style={{ flex: 1 }}
           renderItem={({ item }) => {
             return (
-              <TouchableOpacity onPress={() => navigation.navigate('Machines')} style={[styles.item,
-              { backgroundColor: item.alert == "yes" ? "rgba(186, 13, 39, .94)" : "rgba(22, 171, 9, .94)" }]} >
+              <TouchableOpacity onPress={() => this.props.navigation.navigate('Dashboard', {
+                values: item.values,
+                max_val: item.max_val,
+                name: item.name
+              })} style={[styles.item,
+              { backgroundColor: Math.max(...item.values) >= item.max_val ? "rgba(186, 13, 39, .94)" : "rgba(22, 171, 9, .94)" }]} >
                 <View style={{ flex: 1, flexDirection: 'row' }}>
-                  <Ionicons name={item.logo} size={30} color={"white"} />
+                  <Ionicons name={this.state.logo} size={30} color={"white"} />
                   <View style={{ flexDirection: 'column' }}>
-                    <Text style={{ fontSize: 20, paddingLeft: 20, color: "white" }}>{`${item.key}`}</Text>
+                    <Text style={{ fontSize: 20, paddingLeft: 20, color: "white" }}>{`${item.name}`}</Text>
                   </View>
                 </View>
               </TouchableOpacity>
