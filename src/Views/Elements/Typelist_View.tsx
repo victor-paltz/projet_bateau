@@ -37,7 +37,7 @@ function Home({ navigation }) {
             { key: 'Énergie', logo: 'ios-battery-full', alert: "no" },
             { key: 'Flotteur', logo: 'md-boat', alert: "no" },
             { key: 'Navigation', logo: 'md-compass', alert: "no" },
-            { key: 'Propultion', logo: 'md-speedometer', alert: "no" },
+            { key: 'Propulsion', logo: 'md-speedometer', alert: "no" },
             { key: 'Sécurité', logo: 'md-lock', alert: "no" },
             { key: 'Transmission', logo: 'md-git-compare', alert: "no" },
           ]}
