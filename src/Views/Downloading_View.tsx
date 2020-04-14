@@ -13,7 +13,7 @@ export default class DownloadingView extends React.Component {
     super(props)
     this.state = {
       spinValue: new Animated.Value(0),
-      visible: true,
+      visible: false,
     }
   }
 
@@ -40,10 +40,7 @@ export default class DownloadingView extends React.Component {
     });
 
     return (
-
-      <ImageBackground source={require("./background-boats-sailing-flat-design.jpg")}
-        imageStyle={{ resizeMode: 'cover' }}
-        style={{ flex: 1 }}>
+      <>
         <View style={styles.main_container}>
           <TouchableWithoutFeedback onPress={this.rotateSpring}>
             <Animated.View style={[styles.circle, {
@@ -66,8 +63,7 @@ export default class DownloadingView extends React.Component {
             </DialogContent>
           </Dialog>
         </View>
-      </ImageBackground>
-
+      </>
     )
   }
 }

@@ -40,9 +40,7 @@ export default class EquipmentDashboard extends React.Component {
         const xAxisHeight = 1
 
         return (
-            <ImageBackground source={require("./../background-boats-sailing-flat-design.jpg")}
-                imageStyle={{ resizeMode: 'cover', opacity: .3 }}
-                style={{ flex: 1 }}>
+            <View>
                 <Text style={{ fontSize: 20 }}>Equipement number 10:</Text>
                 <View style={{ backgroundColor: "rgb(200, 200, 200)", flexDirection: 'row', padding: 20 }}>
 
@@ -95,7 +93,7 @@ export default class EquipmentDashboard extends React.Component {
 
                 </View >
                 <Text>Done</Text>
-            </ImageBackground>
+            </View>
         )
     }
 }
