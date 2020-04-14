@@ -1,0 +1,6 @@
+module Pods_nfcexample {
+  umbrella header "Pods-nfcexample-umbrella.h"
+
+  export *
+  module * { export * }
+}
